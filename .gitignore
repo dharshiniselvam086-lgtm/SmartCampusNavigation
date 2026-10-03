@@ -1,0 +1,12 @@
+# Java compiled files
+*.class
+
+# IDE
+.vscode/
+.idea/
+
+# MySQL credentials
+Src/dao/DatabaseConnection.java
+
+# Tomcat generated files
+WEB-INF/classes/

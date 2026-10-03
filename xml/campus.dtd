@@ -1,0 +1,16 @@
+<!ELEMENT campus (building+)>
+
+<!ELEMENT building (location+)>
+<!ATTLIST building
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+>
+
+<!ELEMENT location (name, floor, type, description)>
+<!ATTLIST location id ID #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT floor (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT description (#PCDATA)>

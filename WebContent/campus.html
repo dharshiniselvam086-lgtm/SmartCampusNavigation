@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Campus Map</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function searchLocation() {
+
+            let searchText =
+                document.getElementById("locationSearch").value.toLowerCase();
+
+            let result =
+                document.getElementById("searchResult");
+
+            if (searchText.includes("cse")) {
+                result.innerHTML =
+                    "CSE Block - Classrooms, Labs and Faculty Rooms";
+            }
+            else if (searchText.includes("library")) {
+                result.innerHTML =
+                    "Library - 1st Floor, Main Building";
+            }
+            else if (searchText.includes("seminar")) {
+                result.innerHTML =
+                    "Seminar Hall - Main Block";
+            }
+            else if (searchText.includes("admin")) {
+                result.innerHTML =
+                    "Admin Block - Principal and Office";
+            }
+            else {
+                result.innerHTML =
+                    "Location not found.";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Campus Navigation</h1>
+    </header>
+
+    <div class="container">
+
+        <h2>Campus Map</h2>
+
+        <div class="search-box">
+
+            <input type="text" id="locationSearch" placeholder="Search classroom, lab, library...">
+
+            <button onclick="searchLocation()">Search</button>
+
+        </div>
+
+        <p id="searchResult"></p>
+
+        <div class="map">
+
+            <div class="building">
+                <h3>CSE Block</h3>
+                <p>Classrooms</p>
+                <p>Computer Labs</p>
+                <p>Faculty Rooms</p>
+            </div>
+
+            <div class="building">
+                <h3>Library</h3>
+                <p>Books</p>
+                <p>Digital Library</p>
+            </div>
+
+            <div class="building">
+                <h3>Seminar Hall</h3>
+                <p>Events</p>
+                <p>Workshops</p>
+            </div>
+
+            <div class="building">
+                <h3>Admin Block</h3>
+                <p>Principal Office</p>
+                <p>Office</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

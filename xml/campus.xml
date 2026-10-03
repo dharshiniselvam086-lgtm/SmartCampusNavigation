@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE campus SYSTEM "campus.dtd">
+
+<campus>
+
+    <building id="B1" name="CSE Block">
+
+        <location id="L1">
+            <name>CSE Classroom 1</name>
+            <floor>1</floor>
+            <type>Classroom</type>
+            <description>CSE classroom</description>
+        </location>
+
+        <location id="L2">
+            <name>CSE Computer Lab</name>
+            <floor>1</floor>
+            <type>Laboratory</type>
+            <description>Computer laboratory</description>
+        </location>
+
+        <location id="L3">
+            <name>Faculty Room</name>
+            <floor>2</floor>
+            <type>Office</type>
+            <description>CSE faculty rooms</description>
+        </location>
+
+    </building>
+
+    <building id="B2" name="Library Block">
+
+        <location id="L4">
+            <name>Central Library</name>
+            <floor>1</floor>
+            <type>Library</type>
+            <description>Books and digital library</description>
+        </location>
+
+    </building>
+
+    <building id="B3" name="Main Block">
+
+        <location id="L5">
+            <name>Seminar Hall 1</name>
+            <floor>1</floor>
+            <type>Seminar Hall</type>
+            <description>Seminars and workshops</description>
+        </location>
+
+    </building>
+
+    <building id="B4" name="Admin Block">
+
+        <location id="L6">
+            <name>Principal Office</name>
+            <floor>1</floor>
+            <type>Office</type>
+            <description>Principal office</description>
+        </location>
+
+        <location id="L7">
+            <name>College Office</name>
+            <floor>1</floor>
+            <type>Office</type>
+            <description>Administrative office</description>
+        </location>
+
+    </building>
+
+</campus>
