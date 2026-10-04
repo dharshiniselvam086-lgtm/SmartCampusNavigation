@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.net.URI;
 
 public class DatabaseConnection {
 
@@ -13,22 +14,30 @@ public class DatabaseConnection {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String host = System.getenv("MYSQLHOST");
-            String port = System.getenv("MYSQLPORT");
-            String database = System.getenv("MYSQLDATABASE");
+            String publicUrl = System.getenv("MYSQL_PUBLIC_URL");
+
+            URI uri = URI.create(publicUrl);
+
+            String host = uri.getHost();
+
+            int port = uri.getPort();
+
+            String database = uri.getPath().substring(1);
+
             String user = System.getenv("MYSQLUSER");
+
             String password = System.getenv("MYSQLPASSWORD");
 
-            String url = "jdbc:mysql://"
+            String jdbcUrl = "jdbc:mysql://"
                     + host
                     + ":"
                     + port
                     + "/"
                     + database
-                    + "?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+                    + "?useSSL=true&serverTimezone=UTC";
 
             connection = DriverManager.getConnection(
-                    url,
+                    jdbcUrl,
                     user,
                     password);
 
