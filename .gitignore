@@ -1,12 +1,12 @@
 # Java compiled files
 *.class
 
+# Maven build output
+target/
+
 # IDE
 .vscode/
 .idea/
-
-# MySQL credentials
-Src/dao/DatabaseConnection.java
 
 # Tomcat generated files
 WEB-INF/classes/
